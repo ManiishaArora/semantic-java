@@ -1,6 +1,6 @@
 {
   "branches": "master",
-  "repositoryUrl": "https://github.com/thecodinganalyst/semantic-java",
+  "repositoryUrl": "https://github.com/ManiishaArora/semantic-java",
   "debug": "false",
   "plugins": [
     "@semantic-release/commit-analyzer",
