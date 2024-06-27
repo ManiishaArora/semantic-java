@@ -11,6 +11,6 @@ class GreetingControllerTest {
     @Test
     void greet_return_hello_name() {
         String actual = greetingController.Greet("Dennis");
-        assertEquals(actual, "Hello Dennis");
+        assertEquals(actual, "Hello New User Dennis");
     }
 }
