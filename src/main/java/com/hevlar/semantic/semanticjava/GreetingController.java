@@ -21,4 +21,9 @@ public class GreetingController {
     public String GreetTwo(@RequestParam(value = "name", defaultValue = "World") String name){
         return "Hello " + name;
     }
+
+    @GetMapping("/greet/v3")
+    public String GreetThree(@RequestParam(value = "name", defaultValue = "World") String name){
+        return "Hello " + name;
+    }
 }
