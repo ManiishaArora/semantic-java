@@ -5,9 +5,9 @@ name: Release
 
 on:
   push:
-    branches: [ master, alpha, beta ]
+    branches: [ master, alpha, beta, 'verify-feature-*' ]
   pull_request:
-    branches: [ master, alpha, beta ]
+    branches: [ master, alpha, beta, 'verify-feature-*'  ]
 
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
