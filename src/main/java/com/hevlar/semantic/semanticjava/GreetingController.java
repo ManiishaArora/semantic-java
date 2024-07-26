@@ -12,7 +12,7 @@ public class GreetingController {
         return "Hello " + name;
     }
 
-    @GetMapping("/greet/v1")
+    @GetMapping("/greet/v1/new")
     public String GreetOne(@RequestParam(value = "name", defaultValue = "World") String name){
         return "Hello " + name;
     }
