@@ -1,5 +1,15 @@
 {
-  "branches": "master",
+  "branches": 
+    ["master",
+    {
+      "name": "alpha",
+      "prerelease": true
+    },
+    {
+      "name": "beta",
+      "prerelease": true
+    }
+    ],
   "repositoryUrl": "https://github.com/ManiishaArora/semantic-java",
   "debug": "false",
   "plugins": [
