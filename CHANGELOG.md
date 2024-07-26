@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.3.0](https://github.com/ManiishaArora/semantic-java/compare/v1.2.0...v1.3.0) (2024-07-26)
+
+
+### Features
+
+* Updated Release Process ([60323f3](https://github.com/ManiishaArora/semantic-java/commit/60323f32ff86ad9c0bd44f021e5fa5c98a072620))
+
 # [1.2.0](https://github.com/ManiishaArora/semantic-java/compare/v1.1.0...v1.2.0) (2024-06-27)
 
 
