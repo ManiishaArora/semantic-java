@@ -1,0 +1,18 @@
+// TODO: adapt title, description and keywords
+= Example title
+:description: Example description.
+:keywords: example
+:toc: left
+:icons: font
+:sectnums:
+:sectanchors:
+
+**About**
+
+// TODO: adapt lead
+[role="lead"]
+This documentation is an example.
+
+include::_01-general.adoc[]
+
+include::_02-system.adoc[]
