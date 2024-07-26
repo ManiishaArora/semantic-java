@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.4.0-verify-feature-new-api.1](https://github.com/ManiishaArora/semantic-java/compare/v1.3.0...v1.4.0-verify-feature-new-api.1) (2024-07-26)
+
+
+### Features
+
+* Added new API in Update GreetingController.java ([cf96731](https://github.com/ManiishaArora/semantic-java/commit/cf967318677e5f8a8f8ce463aa7aba21d97defc6))
+
 # [1.3.0](https://github.com/ManiishaArora/semantic-java/compare/v1.2.0...v1.3.0) (2024-07-26)
 
 
