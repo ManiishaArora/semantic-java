@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.3.0-alpha.1](https://github.com/ManiishaArora/semantic-java/compare/v1.2.0...v1.3.0-alpha.1) (2024-07-26)
+
+
+### Features
+
+* **version:** added new API ([eb5e867](https://github.com/ManiishaArora/semantic-java/commit/eb5e867bf71ee8e4b1fcfc0bd2e7d7f9bbf857f4))
+
 # [1.2.0](https://github.com/ManiishaArora/semantic-java/compare/v1.1.0...v1.2.0) (2024-06-27)
 
 
