@@ -17,3 +17,14 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  Approval:
+    name: Manual Workflow Approval
+    uses: trstringer/manual-approval@v1.9.0
+    with:
+      # Required approvers
+      approvers: maniisha.arora@gmail.com
+      secret: ${{ github.TOKEN }}
+      # Minimum number of approvals to progress workflow
+      issue-title: Confirm Release Candidate
+      # The custom body for the issue
+      issue-body: Version number is - V1.0.0
