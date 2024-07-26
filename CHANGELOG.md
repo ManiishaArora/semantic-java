@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.4.0](https://github.com/ManiishaArora/semantic-java/compare/v1.3.0...v1.4.0) (2024-07-26)
+
+
+### Features
+
+* Update GreetingController.java ([18bae56](https://github.com/ManiishaArora/semantic-java/commit/18bae5680e0120592ee5c695ddf0ac6d64375ba2))
+
 # [1.3.0](https://github.com/ManiishaArora/semantic-java/compare/v1.2.0...v1.3.0) (2024-07-26)
 
 
