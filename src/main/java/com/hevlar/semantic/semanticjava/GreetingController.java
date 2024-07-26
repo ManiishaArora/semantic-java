@@ -17,7 +17,7 @@ public class GreetingController {
         return "Hello " + name;
     }
 
-    @GetMapping("/greet/v2")
+    @GetMapping("/greet/v2/new")
     public String GreetTwo(@RequestParam(value = "name", defaultValue = "World") String name){
         return "Hello " + name;
     }
