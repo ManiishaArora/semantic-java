@@ -8,6 +8,10 @@
     {
       "name": "beta",
       "prerelease": true
+    },
+    {
+      "name" : "verify-feature-*",
+      "prerelease": true
     }
     ],
   "repositoryUrl": "https://github.com/ManiishaArora/semantic-java",
