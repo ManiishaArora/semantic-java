@@ -3,28 +3,24 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: 
   workflow_dispatch
 jobs:
-  Explore-GitHub-Actions:
+  semver:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v0.9.7
+        with:
+          versionSpec: '5.x'
+      - name: Determine Version
+        uses: gittools/actions/gitversion/execute@v0.9.7
+      - name: Display SemVer
         run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
-  Approval:
-    name: Manual Workflow Approval
-    uses: trstringer/manual-approval@v1.9.0
-    with:
-      # Required approvers
-      approvers: maniisha.arora@gmail.com
-      secret: ${{ github.TOKEN }}
-      # Minimum number of approvals to progress workflow
-      issue-title: Confirm Release Candidate
-      # The custom body for the issue
-      issue-body: Version number is - V1.0.0
+          echo "SemVer: $GITVERSION_SEMVER" && echo "$version" && echo "$major.$minor.$patch"
+      - name: Create git tag
+        run: |
+          git tag $GITVERSION_SEMVER
+      - name: Push git tag
+        run: git push origin $GITVERSION_SEMVER
