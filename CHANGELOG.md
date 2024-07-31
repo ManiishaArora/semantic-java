@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.5.0](https://github.com/ManiishaArora/semantic-java/compare/v1.4.0...v1.5.0) (2024-07-31)
+
+
+### Features
+
+* New API Update GreetingController.java ([ee19aae](https://github.com/ManiishaArora/semantic-java/commit/ee19aae90b0a8b9d962b4f6b4f8c7eba09468992))
+
 # [1.4.0](https://github.com/ManiishaArora/semantic-java/compare/v1.3.0...v1.4.0) (2024-07-26)
 
 
