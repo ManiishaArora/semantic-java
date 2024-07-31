@@ -1,0 +1,40 @@
+name: Test 2
+
+on:
+  push:
+    branches: [ main ]
+  release:
+    types: [ published ]
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  version:
+    name: version
+    runs-on: ubuntu-latest
+    outputs:
+      VERSION: ${{ steps.emit.outputs.VERSION }}
+    steps:
+      - id: checkout
+        name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: emit
+        name: emit
+        run: |
+          echo "emitting version..."
+          [[ ${GITHUB_REF_TYPE} == "branch" ]] && {
+            LATEST_REV=$(git rev-list --tags --max-count=1)
+            LATEST_TAG=$(git describe --tags "${LATEST_REV}" 2> /dev/null || echo 0.0.1)
+            SHA=$(git rev-parse --short "${GITHUB_SHA}")
+            VERSION="${LATEST_TAG}-next-${SHA}"
+          }
+          [[ ${GITHUB_REF_TYPE} == "tag" ]] && {
+            VERSION="${GITHUB_REF_NAME}"
+          }
+          echo "emitted version ${VERSION}"
+          echo "VERSION=${VERSION}" >> "${GITHUB_OUTPUT}"
