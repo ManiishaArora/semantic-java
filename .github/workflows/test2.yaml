@@ -27,6 +27,7 @@ jobs:
         name: emit
         run: |
           echo "emitting version..."
+          echo ${GITHUB_REF_NAME}
           [[ ${GITHUB_REF_TYPE} == "branch" ]] && {
             LATEST_REV=$(git rev-list --tags --max-count=1)
             LATEST_TAG=$(git describe --tags "${LATEST_REV}" 2> /dev/null || echo 0.0.1)
