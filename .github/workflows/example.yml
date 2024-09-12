@@ -1,0 +1,21 @@
+name: Base64 Example
+
+on:
+  workflow_dispatch:
+    inputs:
+      base64_content:
+        description: 'Base64 encoded content'
+        required: true
+
+jobs:
+  process_base64:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Decode base64 input
+        run: |
+          echo "${{ inputs.base64_content }}" | base64 --decode > decoded_file.txt
+          cat decoded_file.txt
+        shell: bash
